@@ -1,20 +1,30 @@
-Run actions/checkout@v3
-Set up Python 3.9
-Install dependencies
-  pip install -r server/requirements.txt
-Run Django tests
-  Found 0 test(s).
-  System check identified no issues (0 silenced).
-  ----------------------------------------------------------------------
-  Ran 0 tests in 0.000s
-  NO TESTS RAN
-Set up Node.js 16
-Install frontend dependencies
-  npm install
-Run frontend tests
-  PASS src/App.test.js
-  ✓ renders sign up page (16 ms)
-Build frontend
-  react-scripts build
-  Creating an optimized production build...
-  Compiled successfully.
+2024-01-15T10:23:45.123Z  test  Set up job
+2024-01-15T10:23:46.456Z  test  Run actions/checkout@v3
+2024-01-15T10:23:47.789Z  test  Set up Python 3.9
+2024-01-15T10:23:52.123Z  test  Install dependencies
+2024-01-15T10:23:58.456Z  test    pip install -r requirements.txt
+2024-01-15T10:24:05.789Z  test  Run Django tests
+2024-01-15T10:24:06.123Z  test    Found 0 test(s).
+2024-01-15T10:24:06.456Z  test    Ran 0 tests in 0.000s
+2024-01-15T10:24:06.789Z  test    OK
+2024-01-15T10:24:07.123Z  test  Set up Node.js 16
+2024-01-15T10:24:12.456Z  test  Install frontend dependencies
+2024-01-15T10:24:18.789Z  test    npm install
+2024-01-15T10:24:19.123Z  test  Run frontend tests
+2024-01-15T10:24:22.456Z  test    PASS src/App.test.js
+2024-01-15T10:24:22.789Z  test    ✓ renders sign up page (16 ms)
+2024-01-15T10:24:23.123Z  test  Complete job
+2024-01-15T10:24:25.456Z  build  Set up job
+2024-01-15T10:24:26.789Z  build  Run actions/checkout@v3
+2024-01-15T10:24:27.123Z  build  Set up Python 3.9
+2024-01-15T10:24:32.456Z  build  Install dependencies
+2024-01-15T10:24:38.789Z  build    pip install -r requirements.txt
+2024-01-15T10:24:39.123Z  build  Run migrations
+2024-01-15T10:24:40.456Z  build    Operations to perform: Apply all migrations
+2024-01-15T10:24:41.789Z  build    Running migrations: No migrations to apply.
+2024-01-15T10:24:42.123Z  build  Build frontend
+2024-01-15T10:24:48.456Z  build    Creating an optimized production build...
+2024-01-15T10:24:55.789Z  build    Compiled successfully.
+2024-01-15T10:24:56.123Z  build  Deploy to server
+2024-01-15T10:24:56.456Z  build    Deployment steps would go here
+2024-01-15T10:24:56.789Z  build  Complete job
