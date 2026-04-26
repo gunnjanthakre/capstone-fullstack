@@ -1,0 +1,20 @@
+Run actions/checkout@v3
+Set up Python 3.9
+Install dependencies
+  pip install -r server/requirements.txt
+Run Django tests
+  Found 0 test(s).
+  System check identified no issues (0 silenced).
+  ----------------------------------------------------------------------
+  Ran 0 tests in 0.000s
+  NO TESTS RAN
+Set up Node.js 16
+Install frontend dependencies
+  npm install
+Run frontend tests
+  PASS src/App.test.js
+  ✓ renders sign up page (16 ms)
+Build frontend
+  react-scripts build
+  Creating an optimized production build...
+  Compiled successfully.

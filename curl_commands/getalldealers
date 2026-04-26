@@ -1,0 +1,4 @@
+curl -X GET http://127.0.0.1:8000/api/dealerships/
+
+Output:
+{"dealers": [{"id": 1, "full_name": "ABC Motors", "city": "Kansas City", "address": "123 Main St, Kansas City, KS", "zip": "64108", "state": "Kansas", "lat": 39.0997, "long": -94.5786}, {"id": 2, "full_name": "XYZ Auto Sales", "city": "Topeka", "address": "456 Oak Ave, Topeka, KS", "zip": "66603", "state": "Kansas", "lat": 39.0558, "long": -95.689}, {"id": 3, "full_name": "Premium Cars", "city": "Wichita", "address": "789 Elm St, Wichita, KS", "zip": "67202", "state": "Kansas", "lat": 37.6872, "long": -97.3301}]}

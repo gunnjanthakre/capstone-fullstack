@@ -1,0 +1,4 @@
+curl -X GET http://127.0.0.1:8000/api/reviews/1/
+
+Output:
+{"reviews": [{"id": 1, "name": "John Doe", "dealership_id": 1, "review": "Great service and friendly staff!", "purchase": true, "purchase_date": "2024-01-15", "car_make": "Toyota", "car_model": "Camry", "car_year": 2022, "sentiment": "positive"}, {"id": 2, "name": "Jane Smith", "dealership_id": 1, "review": "Excellent customer service", "purchase": false, "purchase_date": null, "car_make": null, "car_model": null, "car_year": null, "sentiment": "positive"}]}

@@ -1,0 +1,5 @@
+Django==6.0.4
+djangorestframework==3.17.1
+django-cors-headers==4.9.0
+pymongo==4.17.0
+requests==2.33.1

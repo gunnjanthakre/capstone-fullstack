@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1>Add Review for {{ dealer.full_name }}</h1>
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+                <label for="review" class="form-label">Review</label>
+                <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
+            </div>
+            <div class="mb-3 form-check">
+                <input class="form-check-input" type="checkbox" id="purchase" name="purchase">
+                <label class="form-check-label" for="purchase">I purchased a vehicle</label>
+            </div>
+            <div class="mb-3">
+                <label for="purchase_date" class="form-label">Purchase Date</label>
+                <input type="date" class="form-control" id="purchase_date" name="purchase_date">
+            </div>
+            <div class="mb-3">
+                <label for="car_make" class="form-label">Car Make</label>
+                <select class="form-select" id="car_make" name="car_make">
+                    <option value="">Select make</option>
+                    {% for make in makes %}
+                        <option value="{{ make.name }}">{{ make.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="car_model" class="form-label">Car Model</label>
+                <input type="text" class="form-control" id="car_model" name="car_model">
+            </div>
+            <div class="mb-3">
+                <label for="car_year" class="form-label">Car Year</label>
+                <input type="number" class="form-control" id="car_year" name="car_year" min="1900" max="2100">
+            </div>
+            <button class="btn btn-primary" type="submit">Submit Review</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

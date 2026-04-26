@@ -1,0 +1,4 @@
+curl -X GET http://127.0.0.1:8000/api/cars/makes/
+
+Output:
+{"makes": [{"id": 1, "name": "Toyota"}, {"id": 2, "name": "Honda"}, {"id": 3, "name": "Ford"}, {"id": 4, "name": "Chevrolet"}, {"id": 5, "name": "Nissan"}]}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-md-8">
+        <h1>Dealers</h1>
+        <p>Browse our available dealers. Filter by state or click through to view dealer details and reviews.</p>
+    </div>
+    <div class="col-md-4">
+        <form method="get" class="d-flex">
+            <input name="state" value="{{ state }}" class="form-control me-2" placeholder="Filter by state" aria-label="State">
+            <button class="btn btn-primary" type="submit">Filter</button>
+        </form>
+    </div>
+</div>
+
+{% if dealers %}
+    <div class="row">
+        {% for dealer in dealers %}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ dealer.full_name }}</h5>
+                        <p class="card-text">{{ dealer.address }}<br>{{ dealer.city }}, {{ dealer.state }} {{ dealer.zip }}</p>
+                        <a href="{% url 'dealer_detail' dealer.id %}" class="btn btn-outline-primary">View Dealer</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">No dealers found for the selected state.</div>
+{% endif %}
+{% endblock %}
